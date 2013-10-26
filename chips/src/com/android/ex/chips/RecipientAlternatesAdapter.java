@@ -21,7 +21,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.MatrixCursor;
-import android.location.CountryDetector;
+// import android.location.CountryDetector;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.telephony.PhoneNumberUtils;
@@ -200,11 +200,13 @@ public class RecipientAlternatesAdapter extends CursorAdapter {
             return address.toLowerCase();
         }
 
-        final CountryDetector detector =
-                (CountryDetector) context.getSystemService(Context.COUNTRY_DETECTOR);
-        final String currentCountryIso = detector.detectCountry().getCountryIso();
+//         final CountryDetector detector =
+//                 (CountryDetector) context.getSystemService(Context.COUNTRY_DETECTOR);
+//         final String currentCountryIso = detector.detectCountry().getCountryIso();
 
-        return PhoneNumberUtils.formatNumberToE164(address, currentCountryIso);
+//         return PhoneNumberUtils.formatNumberToE164(address, currentCountryIso);
+
+        return address;
     }
 
     private static HashMap<String, RecipientEntry> processContactEntries(Context context,
